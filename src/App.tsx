@@ -1,8 +1,13 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
+import { Scene } from "./components";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <Scene variant="iphonex">
+      <h1> Hmm </h1>
+    </Scene>
+  );
 }
 
 export default App;
