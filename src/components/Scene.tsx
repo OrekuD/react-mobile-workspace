@@ -3,10 +3,19 @@ import { Large, Medium, Small } from "./Variants";
 
 interface Props {
   variant?: "large" | "medium" | "small";
+  backgroundColor?: string;
   children: React.ReactNode;
+  renderTitle?: React.ReactNode;
+  renderExtraContent?: React.ReactNode;
 }
 
-const Scene = ({ variant, children }: Props) => {
+const Scene = ({
+  variant,
+  children,
+  backgroundColor,
+  renderTitle,
+  renderExtraContent,
+}: Props) => {
   let item = <Medium children={children} />;
 
   switch (variant) {
@@ -24,7 +33,22 @@ const Scene = ({ variant, children }: Props) => {
       break;
   }
 
-  return <div className="container">{item}</div>;
+  return (
+    <div
+      className="container"
+      style={{ backgroundColor: backgroundColor ? backgroundColor : "maroon" }}
+    >
+      {renderTitle || renderExtraContent ? (
+        <div className="content">
+          {renderTitle}
+          {renderExtraContent}
+        </div>
+      ) : (
+        ""
+      )}
+      {item}
+    </div>
+  );
 };
 
 export default Scene;
