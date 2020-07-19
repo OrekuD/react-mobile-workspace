@@ -4,7 +4,7 @@ import { Scene } from "./components";
 
 function App() {
   return (
-    <Scene variant="iphonex">
+    <Scene variant="medium">
       <h1> Hmm </h1>
     </Scene>
   );

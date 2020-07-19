@@ -1,23 +1,26 @@
 import React from "react";
-import { Note10, IPhoneX } from "./Phones";
+import { Large, Medium, Small } from "./Variants";
 
 interface Props {
-  variant?: "note10" | "iphonex";
+  variant?: "large" | "medium" | "small";
   children: React.ReactNode;
 }
 
 const Scene = ({ variant, children }: Props) => {
-  let item = <IPhoneX children={children} />;
+  let item = <Medium children={children} />;
 
   switch (variant) {
-    case "note10":
-      item = <Note10 children={children} />;
+    case "large":
+      item = <Large children={children} />;
       break;
-    case "iphonex":
-      item = <IPhoneX children={children} />;
+    case "medium":
+      item = <Medium children={children} />;
+      break;
+    case "small":
+      item = <Small children={children} />;
       break;
     default:
-      item = <IPhoneX children={children} />;
+      item = <Medium children={children} />;
       break;
   }
 

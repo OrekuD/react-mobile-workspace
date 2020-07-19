@@ -5,7 +5,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const IPhoneX = ({ children }: Props) => {
+const Medium = ({ children }: Props) => {
   return (
     <div className={styles.container}>
       <div className={styles.statusbar}>
@@ -16,4 +16,4 @@ const IPhoneX = ({ children }: Props) => {
   );
 };
 
-export default IPhoneX;
+export default Medium;

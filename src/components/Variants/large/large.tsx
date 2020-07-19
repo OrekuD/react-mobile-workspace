@@ -5,8 +5,8 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Note10 = ({ children }: Props) => {
+const Large = ({ children }: Props) => {
   return <div className={styles.container}>{children}</div>;
 };
 
-export default Note10;
+export default Large;
